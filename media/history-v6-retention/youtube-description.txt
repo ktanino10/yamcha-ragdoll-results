@@ -1,0 +1,45 @@
+当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。
+
+V6の後続保持診断 / 旧条件。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。
+
+研究の発想は「ヤムチャの倒れたポーズが偶然に現れるのか」。映像の模型は原作の複製ではなく、研究用の汎用表示です。
+V9主集計は記録6,900、判定可能6,569、未確定331、成功確認0。82%は姿勢類似度で、発生確率ではありません。V10の物理評価は0/32。
+未確定を失敗や0点へ補完していません。動画の追加制作は物理試行を増やしません。
+
+章
+00:00 v6の追補
+00:19 今回の正式な結果
+00:46 結果を混ぜない
+01:04 計測を進めるための修正
+01:37 回転の検査仕様を明示して変更
+02:24 動かす前に、全13配置を照合
+02:34 記録による影響を確認
+02:57 保存値で姿勢を比較
+03:12 全13配置を並べる
+03:25 この診断で言えること
+
+保存資料
+V9凍結済み台帳・保存解析、各版の記録。結果サイトのCSV・姿勢データ・source hash一覧で根拠を確認できます。
+
+方法の参考
+Unity 6 Scripting API: Rigidbody.rotation
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody-rotation.html
+Unity 6 Scripting API: SceneManager.sceneCount
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SceneManagement.SceneManager-sceneCount.html
+Unity 6 Scripting API: Quaternion
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Quaternion.html
+VOICEVOX ソフトウェア利用規約
+https://voicevox.hiroshiba.jp/term/
+東北ずん子・ずんだもんプロジェクト 利用ガイドライン
+https://zunko.jp/guideline.html
+音源についての共通規約
+https://zunko.jp/con_ongen_kiyaku.html
+
+音声：VOICEVOX:ずんだもん・四国めたん（合成音声）
+立ち絵：坂本アヒル（ずんだもんV3.2基本版・通常衣装、四国めたん2.1）
+"Local Forecast - Elevator" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+既存mixの抜粋・音量調整・ループ接続・ducking・fadeを保持しています。
+
+整理基準日：2026-11-01。旧条件の動画は、画面・説明に記した当時の範囲です。

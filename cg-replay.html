@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'">
+  <title>保存軌道の人体CG再生｜Ragdoll研究</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="geometry.js" defer></script>
+  <script src="blue-human.js" defer></script>
+  <script src="cg-replay.js" defer></script>
+</head>
+<body class="cg-replay-page">
+  <main>
+    <canvas id="cg-film" width="1920" height="1080" aria-label="V9の保存位置と回転を用いた表示専用人体CG"></canvas>
+    <div class="section-wrap cg-controls">
+      <h1>保存軌道のCGフレーム確認</h1>
+      <p>映像の表示frameを選びます。新しい物理計算ではありません。落下の再生中は固定した世界座標・固定カメラ、終端の拡大ではカメラの変更を明示します。</p>
+      <label for="export-frame">映像のframe（30fps）
+        <input id="export-frame" type="number" min="0" max="1319" step="1" value="0">
+      </label>
+      <button id="cg-play" type="button">保存映像を再生（無音）</button>
+      <p id="cg-state" role="status"></p>
+      <p><a href="index.html#poses">結果ページの360度比較に戻る</a></p>
+    </div>
+    <p id="cg-error" class="error-box" role="alert" hidden></p>
+  </main>
+</body>
+</html>

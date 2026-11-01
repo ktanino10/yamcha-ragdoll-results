@@ -1,0 +1,49 @@
+当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。
+
+第2回・第3回の旧条件 / 2026-10-21。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。
+
+研究の発想は「ヤムチャの倒れたポーズが偶然に現れるのか」。映像の模型は原作の複製ではなく、研究用の汎用表示です。
+V9主集計は記録6,900、判定可能6,569、未確定331、成功確認0。82%は姿勢類似度で、発生確率ではありません。V10の物理評価は0/32。
+未確定を失敗や0点へ補完していません。動画の追加制作は物理試行を増やしません。
+
+章
+00:00 1 問いとモデル
+00:51 2 力と運動量
+03:07 3 回転と関節
+05:24 4 接触して止まるまで
+06:52 5 連続の式と数値計算
+08:19 6 理解をつなぐ
+
+保存資料
+V9凍結済み台帳・保存解析、各版の記録。結果サイトのCSV・姿勢データ・source hash一覧で根拠を確認できます。
+
+方法の参考
+OpenStax University Physics Volume 1, 5.3 Newton's Second Law
+https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law
+OpenStax University Physics Volume 1, 9.2 Impulse and Collisions
+https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions
+OpenStax University Physics Volume 1, 10.7 Newton's Second Law for Rotation
+https://openstax.org/books/university-physics-volume-1/pages/10-7-newtons-second-law-for-rotation
+OpenStax University Physics Volume 1, 6.2 Friction
+https://openstax.org/books/university-physics-volume-1/pages/6-2-friction
+MIT, Russ Tedrake, Underactuated Robotics: Multi-Body Dynamics
+https://underactuated.mit.edu/multibody.html
+Unity 6.0 Scripting API: Rigidbody.AddForce
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody.AddForce.html
+Unity 6.0 Scripting API: Rigidbody.AddExplosionForce
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html
+Unity 6.0 Scripting API: PhysicsScene.Simulate
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PhysicsScene.Simulate.html
+Unity 6.0 Manual: Joint and Ragdoll stability
+https://docs.unity3d.com/6000.0/Documentation/Manual/RagdollStability.html
+VOICEVOX ソフトウェア利用規約
+https://voicevox.hiroshiba.jp/term/
+東北ずん子・ずんだもんプロジェクト 利用ガイドライン
+https://zunko.jp/guideline.html
+音源についての共通規約
+https://zunko.jp/con_ongen_kiyaku.html
+
+音声：VOICEVOX:ずんだもん（合成音声）
+立ち絵：坂本アヒル（ずんだもんV3.2基本版・通常衣装）
+
+整理基準日：2026-11-01。旧条件の動画は、画面・説明に記した当時の範囲です。

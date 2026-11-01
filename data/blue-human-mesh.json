@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "UNITY_RIGIDBODY_LOCAL_METRES",
+  "strideFloats": 9,
+  "attributes": [
+    "position3",
+    "normal3",
+    "linearColor3"
+  ],
+  "binary": "assets/blue-human-mesh.bin",
+  "sha256": "da41f5f1a60b92007494239373ee9e0ac737b275fc5adb4ccf5be75553d04db4",
+  "bytes": 3279744,
+  "parts": [
+    {
+      "part": 0,
+      "name": "Head",
+      "floatOffset": 0,
+      "vertexCount": 11184,
+      "sourceObjectCount": 7
+    },
+    {
+      "part": 1,
+      "name": "Torso",
+      "floatOffset": 100656,
+      "vertexCount": 7200,
+      "sourceObjectCount": 3
+    },
+    {
+      "part": 2,
+      "name": "Pelvis",
+      "floatOffset": 165456,
+      "vertexCount": 1584,
+      "sourceObjectCount": 1
+    },
+    {
+      "part": 3,
+      "name": "LeftUpperArm",
+      "floatOffset": 179712,
+      "vertexCount": 4176,
+      "sourceObjectCount": 2
+    },
+    {
+      "part": 4,
+      "name": "LeftForearm",
+      "floatOffset": 217296,
+      "vertexCount": 16272,
+      "sourceObjectCount": 13
+    },
+    {
+      "part": 5,
+      "name": "RightUpperArm",
+      "floatOffset": 363744,
+      "vertexCount": 4176,
+      "sourceObjectCount": 2
+    },
+    {
+      "part": 6,
+      "name": "RightForearm",
+      "floatOffset": 401328,
+      "vertexCount": 16272,
+      "sourceObjectCount": 13
+    },
+    {
+      "part": 7,
+      "name": "LeftThigh",
+      "floatOffset": 547776,
+      "vertexCount": 4176,
+      "sourceObjectCount": 2
+    },
+    {
+      "part": 8,
+      "name": "LeftShin",
+      "floatOffset": 585360,
+      "vertexCount": 10944,
+      "sourceObjectCount": 6
+    },
+    {
+      "part": 9,
+      "name": "RightThigh",
+      "floatOffset": 683856,
+      "vertexCount": 4176,
+      "sourceObjectCount": 2
+    },
+    {
+      "part": 10,
+      "name": "RightShin",
+      "floatOffset": 721440,
+      "vertexCount": 10944,
+      "sourceObjectCount": 6
+    }
+  ],
+  "bodyCount": 11,
+  "displayOnly": true,
+  "sourceRendererSha256": "3422f6aedffe88bfc4d6140080270aa94f3e2faacfe6a364f481580a9ce72278",
+  "sourceRenderDataSha256": "50fb321e44c856428cf135082edbda9b9eabb7bbdb9c67d1dfa7e1e2b64606e3",
+  "style": "original blue anatomical display human; no hair or clothing",
+  "cosmeticFeet": "Fixed shin-local display bindings derived from the original illustrative standing layout, not new measured body parts or contacts.",
+  "physicalPoseOrScoreChanged": false,
+  "newPhysicsRuns": 0
+}

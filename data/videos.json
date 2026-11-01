@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "videos": [
+    {
+      "id": "summary",
+      "title": "ヤムチャのポーズ研究総括｜6,900件で分かったこと、まだ言えないこと",
+      "kindLabel": "今回の総括 / 合成音声",
+      "description": "V9の確定記録、未確定331件、最高47.22%と成功条件、V10の物理評価0/32を約4分で整理します。",
+      "contextNote": "82%は姿勢類似度の閾値。発生確率ではありません。追加の物理試行はしていません。",
+      "durationSeconds": 222.866667,
+      "mp4": "media/summary/ragdoll-research-summary-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/summary/poster.jpg",
+      "sha256": "5d0b22c0d9ff0e5ee7f0911b92e57f277a661ba4aa325dea6d26c18707a0cee2",
+      "posterSha256": "702a5eb3e43849843e937cf4a9f60a3003111110c4f5abdad9f61af6adf9d436",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "模型で調べたこと"
+        },
+        {
+          "start": 28.833333333333332,
+          "title": "6,900件の内訳"
+        },
+        {
+          "start": 63.43333333333333,
+          "title": "似ている度合いと成功条件"
+        },
+        {
+          "start": 114.33333333333333,
+          "title": "保存した動きの見方"
+        },
+        {
+          "start": 144.83333333333334,
+          "title": "訂正と、残る限界"
+        },
+        {
+          "start": 198.53333333333333,
+          "title": "記録を、次に残す"
+        }
+      ],
+      "chaptersFile": "media/summary/chapters.json",
+      "script": "media/summary/script.txt",
+      "titleFile": "media/summary/youtube-title.txt",
+      "descriptionFile": "media/summary/youtube-description.txt",
+      "srt": "media/summary/captions.srt",
+      "vtt": "media/summary/captions.vtt"
+    },
+    {
+      "id": "v9-behavior",
+      "title": "V9の倒れる過程を見る｜100の終端と1本の保存軌道",
+      "kindLabel": "保存データの再描画 / 無音",
+      "description": "100例の終端一覧から、trial 0の始点〜終端の実記録、最高非一致例2613へ。34秒から4倍スロー、51秒から実時間の章へ移れます。",
+      "contextNote": "連続軌道はV9 trial 0の1例だけ。同じ記録を2速度で表示します。最高例は静止姿勢で、未保存の動きは生成していません。",
+      "durationSeconds": 98.0,
+      "mp4": "media/behavior/v9-saved-behavior-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/behavior/poster.jpg",
+      "sha256": "3d8c9fe6f8ea67937abc0293ecba08e31b21db8027c34da4b3067950a1f96725",
+      "posterSha256": "7f47c38b5e2e2f37ddc4741b9845627e113db66534f9fd91debc5dc1c4f44ad8",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "何を見せる映像か"
+        },
+        {
+          "start": 8,
+          "title": "100例の終端一覧"
+        },
+        {
+          "start": 22,
+          "title": "3例の非一致へ寄る"
+        },
+        {
+          "start": 34,
+          "title": "trial 0の保存軌道・4倍スロー"
+        },
+        {
+          "start": 51,
+          "title": "同じ軌道を実時間で"
+        },
+        {
+          "start": 59,
+          "title": "参照と最高例・カメラだけ回転"
+        },
+        {
+          "start": 79,
+          "title": "記録数と軌道数を分ける"
+        },
+        {
+          "start": 90,
+          "title": "結果と限界を残す"
+        }
+      ],
+      "chaptersFile": "media/behavior/chapters.json",
+      "script": "media/behavior/script.txt",
+      "titleFile": "media/behavior/youtube-title.txt",
+      "descriptionFile": "media/behavior/youtube-description.txt",
+      "srt": "media/behavior/captions.srt",
+      "vtt": "media/behavior/captions.vtt"
+    },
+    {
+      "id": "human-cg",
+      "title": "青い人体CGで見る倒れる瞬間｜V9の保存姿勢と軌道",
+      "kindLabel": "表示用人体CG / 保存軌道",
+      "description": "手・足・関節を持つ青色の表示用人体を、V9 trial 0の保存位置・回転に追従させたCGです。",
+      "contextNote": "人体の外見は表示専用。11剛体の姿勢・採点・物理条件は変更していません。検査用のCollider形状とは別です。",
+      "durationSeconds": 44.0,
+      "mp4": "media/human-cg/v9-blue-human-cg-v2.mp4",
+      "orientation": "landscape",
+      "poster": "media/human-cg/poster-v2.jpg",
+      "sha256": "65705053bfffa5e9b4a01a23d74806a6f23099ff75a2ada61796e5fa5f147243",
+      "posterSha256": "37f822c1225d9e592e6fcc497b071fbe9e9bc3b04d753f0d131705d8692ced6c",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "青い表示用人体CG"
+        },
+        {
+          "start": 4,
+          "title": "初期〜終端を固定カメラで"
+        },
+        {
+          "start": 14,
+          "title": "同じ世界座標で落下を見る"
+        },
+        {
+          "start": 28,
+          "title": "保存終端をカメラで拡大"
+        },
+        {
+          "start": 36,
+          "title": "別の最高非一致例2613"
+        }
+      ],
+      "chaptersFile": "media/human-cg/chapters.json",
+      "script": "media/human-cg/script.txt",
+      "titleFile": "media/human-cg/youtube-title.txt",
+      "descriptionFile": "media/human-cg/youtube-description.txt",
+      "srt": "media/human-cg/captions.srt",
+      "vtt": "media/human-cg/captions.vtt"
+    },
+    {
+      "id": "legacy-recorder-landscape",
+      "title": "100体を並べた当時の挙動録画｜初期版・保存seedの再生",
+      "kindLabel": "旧条件のRecorder映像 / 横版",
+      "description": "2026-10-18の既存Recorder映像を再編集。100体の表示、選択した非一致例、近接例を旧条件の履歴として見ます。",
+      "contextNote": "当時に収録した保存seedの再実行です。V9の実記録とは別で、新しい試行や現在の成功確率の母数には加えていません。",
+      "durationSeconds": 42.4,
+      "mp4": "media/legacy-recorder-landscape/legacy-recorder-landscape-context-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/legacy-recorder-landscape/poster.jpg",
+      "sha256": "09e14603318920e17d2a6d59ed6b6a81365b5fd7750837ec87a93d385679738c",
+      "posterSha256": "8a8826f1dbf2116c7fd3df44b79b14424b7bec11e7e8da3639be7b0bb69d9c59",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0.0,
+          "title": "旧版の手動参照"
+        },
+        {
+          "start": 4.0,
+          "title": "100体の表示"
+        },
+        {
+          "start": 12.0,
+          "title": "選択した非一致例"
+        },
+        {
+          "start": 21.0,
+          "title": "近接例4132の再生"
+        },
+        {
+          "start": 37.43333333333333,
+          "title": "旧条件のまとめ"
+        }
+      ],
+      "chaptersFile": "media/legacy-recorder-landscape/chapters.json",
+      "script": "media/legacy-recorder-landscape/script.txt",
+      "titleFile": "media/legacy-recorder-landscape/youtube-title.txt",
+      "descriptionFile": "media/legacy-recorder-landscape/youtube-description.txt",
+      "srt": "media/legacy-recorder-landscape/captions.srt",
+      "vtt": "media/legacy-recorder-landscape/captions.vtt"
+    },
+    {
+      "id": "legacy-recorder-portrait",
+      "title": "初期版の模型が倒れる過程｜保存seedの旧Recorder・縦版",
+      "kindLabel": "旧条件のRecorder映像 / 縦版",
+      "description": "同じ初期版の記録を縦型にまとめた履歴映像。現在のV9の参照・判定とは区別します。",
+      "contextNote": "横版と同じ実験記録からの別編集です。動画が2本あっても、実験件数を2倍には数えません。",
+      "durationSeconds": 25.733333,
+      "mp4": "media/legacy-recorder-portrait/legacy-recorder-portrait-context-v1.mp4",
+      "orientation": "portrait",
+      "poster": "media/legacy-recorder-portrait/poster.jpg",
+      "sha256": "f36aeaffb48f6ef14dc8c89585b23b53eb414a10de2e5e9e1c10d6127e980e10",
+      "posterSha256": "f70f82025d5e4a0c2e72bfc60042d53dde257e9ff8d3eb78377f636a99f0129d",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0.0,
+          "title": "旧版の手動参照"
+        },
+        {
+          "start": 3.0,
+          "title": "100体の表示"
+        },
+        {
+          "start": 8.0,
+          "title": "選択した非一致例"
+        },
+        {
+          "start": 12.0,
+          "title": "近接例4132の再生"
+        },
+        {
+          "start": 21.766666666666666,
+          "title": "旧条件のまとめ"
+        }
+      ],
+      "chaptersFile": "media/legacy-recorder-portrait/chapters.json",
+      "script": "media/legacy-recorder-portrait/script.txt",
+      "titleFile": "media/legacy-recorder-portrait/youtube-title.txt",
+      "descriptionFile": "media/legacy-recorder-portrait/youtube-description.txt",
+      "srt": "media/legacy-recorder-portrait/captions.srt",
+      "vtt": "media/legacy-recorder-portrait/captions.vtt"
+    },
+    {
+      "id": "history-r2-comparison",
+      "title": "第2回の補助映像｜保存0.604秒を同時刻・汎用模型で比較",
+      "kindLabel": "旧条件の補助映像 / 無音",
+      "description": "同じ入力のH0と位置solver24候補を、2つの別診断として比較。保存された0〜145 stepを16倍スローで描き直します。",
+      "contextNote": "開始234件時点の旧条件の補助資料。どちらもこの区間では未静止、候補24は未採用。V9の6,900件へ加えません。",
+      "durationSeconds": 37.733333,
+      "mp4": "media/history-r2-comparison/history-r2-comparison-standard-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-r2-comparison/poster.jpg",
+      "sha256": "ca3a85081eaaa856202105a1308f27839b0bc968021f93b08220105e63ddb633",
+      "posterSha256": "88c69a1ef6f226d908309324310bae3d2742aa49b0e497d045d66f4aa3fe7d42",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "旧条件の診断であること"
+        },
+        {
+          "start": 5,
+          "title": "初期姿勢を別の視点から"
+        },
+        {
+          "start": 17,
+          "title": "保存0〜145 stepを16倍スローで"
+        },
+        {
+          "start": 26.733333333333334,
+          "title": "末尾の静止表示"
+        }
+      ],
+      "chaptersFile": "media/history-r2-comparison/chapters.json",
+      "script": "media/history-r2-comparison/script.txt",
+      "titleFile": "media/history-r2-comparison/youtube-title.txt",
+      "descriptionFile": "media/history-r2-comparison/youtube-description.txt",
+      "srt": "media/history-r2-comparison/captions.srt",
+      "vtt": "media/history-r2-comparison/captions.vtt"
+    },
+    {
+      "id": "history-physics",
+      "title": "なぜ倒れて、止まるのか｜物理学の観測ノート",
+      "kindLabel": "旧条件の解説 / 通常衣装再編集",
+      "description": "当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。",
+      "contextNote": "第2回・第3回の旧条件 / 2026-10-21。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。",
+      "durationSeconds": 560.7,
+      "mp4": "media/history-physics/history-physics-standard-v2.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-physics/poster.jpg",
+      "sha256": "b7ad49444f854be6b687060c7f00c68e379e22b35d9d6b5c7f2d5ebaba49a7ec",
+      "posterSha256": "42823bd0635b5a9952ece7e1d2ee3967e6b8befc1940d9ef53c1feca900bd778",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "1 問いとモデル"
+        },
+        {
+          "start": 51.552,
+          "title": "2 力と運動量"
+        },
+        {
+          "start": 187.328,
+          "title": "3 回転と関節"
+        },
+        {
+          "start": 324.288,
+          "title": "4 接触して止まるまで"
+        },
+        {
+          "start": 412.576,
+          "title": "5 連続の式と数値計算"
+        },
+        {
+          "start": 499.8186666666667,
+          "title": "6 理解をつなぐ"
+        }
+      ],
+      "chaptersFile": "media/history-physics/chapters.json",
+      "script": "media/history-physics/script.txt",
+      "titleFile": "media/history-physics/youtube-title.txt",
+      "descriptionFile": "media/history-physics/youtube-description.txt",
+      "srt": "media/history-physics/captions.srt",
+      "vtt": "media/history-physics/captions.vtt"
+    },
+    {
+      "id": "history-mathematics",
+      "title": "「似ている」を数学にする｜旧条件の研究解説",
+      "kindLabel": "旧条件の解説 / 通常衣装再編集",
+      "description": "当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。",
+      "contextNote": "第2回の旧条件・手動例 / 2026-10-21。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。",
+      "durationSeconds": 582.866667,
+      "mp4": "media/history-mathematics/history-mathematics-standard-v2.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-mathematics/poster.jpg",
+      "sha256": "5e3037449bbea53630ff133f9e8b5750e0254b33dc71c6243655830c3ef79980",
+      "posterSha256": "bf5efca82799619128f087a26fb71203bf4193def2f80dfcefb317e6b63a568b",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "1 比較できる座標へ"
+        },
+        {
+          "start": 85.888,
+          "title": "2 距離と角度を測る"
+        },
+        {
+          "start": 175.232,
+          "title": "3 点数と必須条件"
+        },
+        {
+          "start": 290.12266666666665,
+          "title": "4 段階表示を正しく読む"
+        },
+        {
+          "start": 352.36266666666666,
+          "title": "5 乱数と探索"
+        },
+        {
+          "start": 468.4266666666667,
+          "title": "6 保存結果を読む"
+        },
+        {
+          "start": 556.2133333333334,
+          "title": "7 数字を判断の道具へ"
+        }
+      ],
+      "chaptersFile": "media/history-mathematics/chapters.json",
+      "script": "media/history-mathematics/script.txt",
+      "titleFile": "media/history-mathematics/youtube-title.txt",
+      "descriptionFile": "media/history-mathematics/youtube-description.txt",
+      "srt": "media/history-mathematics/captions.srt",
+      "vtt": "media/history-mathematics/captions.vtt"
+    },
+    {
+      "id": "history-experiment",
+      "title": "再現できる実験の進め方｜旧条件の研究解説",
+      "kindLabel": "旧条件の解説 / 通常衣装再編集",
+      "description": "当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。",
+      "contextNote": "第2回・第3回の旧条件 / 2026-10-21。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。",
+      "durationSeconds": 594.866667,
+      "mp4": "media/history-experiment/history-experiment-standard-v2.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-experiment/poster.jpg",
+      "sha256": "5758fc8347095a382c44dcb52df66034b1b2012c1891dd2884e8019b789b7417",
+      "posterSha256": "6c2914c6f083780930648ca3fd159c79be9ca8303e6dcbe54c71ccdd029c1840",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "1 問いと条件を決める"
+        },
+        {
+          "start": 115.84,
+          "title": "2 入力と実行を記録する"
+        },
+        {
+          "start": 201.12,
+          "title": "3 静止と物理妥当性"
+        },
+        {
+          "start": 346.79466666666667,
+          "title": "4 第2回の保存例"
+        },
+        {
+          "start": 379.63733333333334,
+          "title": "4 保存された結果を読む"
+        },
+        {
+          "start": 412.448,
+          "title": "5 見本と記録を混同しない"
+        },
+        {
+          "start": 506.31466666666665,
+          "title": "6 次の実験へつなぐ"
+        }
+      ],
+      "chaptersFile": "media/history-experiment/chapters.json",
+      "script": "media/history-experiment/script.txt",
+      "titleFile": "media/history-experiment/youtube-title.txt",
+      "descriptionFile": "media/history-experiment/youtube-description.txt",
+      "srt": "media/history-experiment/captions.srt",
+      "vtt": "media/history-experiment/captions.vtt"
+    },
+    {
+      "id": "history-v5-v6",
+      "title": "V5からV6へ｜偶然の再現から姿勢の保持診断へ",
+      "kindLabel": "旧条件の解説 / 通常衣装再編集",
+      "description": "当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。",
+      "contextNote": "V5旧仮参照・V6初期配置で停止した段階。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。",
+      "durationSeconds": 463.766667,
+      "mp4": "media/history-v5-v6/history-v5-v6-standard-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-v5-v6/poster.jpg",
+      "sha256": "407baa4fef191d18c1a275d6989cd159f80656ccc924b25f7ab51594f629ba24",
+      "posterSha256": "e431d3aa1aa4996341e35f09ffade4f64f31679a85bbe395f06a64a3d53e43df",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "v5からv6へ"
+        },
+        {
+          "start": 18.96,
+          "title": "v5で分かったこと"
+        },
+        {
+          "start": 52.81066666666667,
+          "title": "何を測った実験なのか"
+        },
+        {
+          "start": 79.992,
+          "title": "試行回数と学習は別"
+        },
+        {
+          "start": 108.25066666666666,
+          "title": "類似度と確率を分ける"
+        },
+        {
+          "start": 181.23466666666667,
+          "title": "どこが目標と違うのか"
+        },
+        {
+          "start": 238.00266666666667,
+          "title": "v6で変えたこと"
+        },
+        {
+          "start": 277.464,
+          "title": "v6で何を評価するのか"
+        },
+        {
+          "start": 333.51733333333334,
+          "title": "再開前に修正したこと"
+        },
+        {
+          "start": 363.984,
+          "title": "今回のv6の実測状態"
+        },
+        {
+          "start": 414.096,
+          "title": "次に必要な切り分け"
+        }
+      ],
+      "chaptersFile": "media/history-v5-v6/chapters.json",
+      "script": "media/history-v5-v6/script.txt",
+      "titleFile": "media/history-v5-v6/youtube-title.txt",
+      "descriptionFile": "media/history-v5-v6/youtube-description.txt",
+      "srt": "media/history-v5-v6/captions.srt",
+      "vtt": "media/history-v5-v6/captions.vtt"
+    },
+    {
+      "id": "history-v6-retention",
+      "title": "V6の保持診断｜固定13配置の結果を振り返る",
+      "kindLabel": "旧条件の解説 / 通常衣装再編集",
+      "description": "当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。",
+      "contextNote": "V6の後続保持診断 / 旧条件。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。",
+      "durationSeconds": 253.633333,
+      "mp4": "media/history-v6-retention/history-v6-retention-standard-v1.mp4",
+      "orientation": "landscape",
+      "poster": "media/history-v6-retention/poster.jpg",
+      "sha256": "3cf1cdc6d4381df494585c346a36cb5a88de38905de38fde72092be609a3be14",
+      "posterSha256": "8a5660093b1ed835ad894b5b60ef4d6c822227fcd1b1b8cbfcb32a869245bea9",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "v6の追補"
+        },
+        {
+          "start": 19.269333333333332,
+          "title": "今回の正式な結果"
+        },
+        {
+          "start": 46.72533333333333,
+          "title": "結果を混ぜない"
+        },
+        {
+          "start": 64.816,
+          "title": "計測を進めるための修正"
+        },
+        {
+          "start": 97.61866666666667,
+          "title": "回転の検査仕様を明示して変更"
+        },
+        {
+          "start": 144.35733333333334,
+          "title": "動かす前に、全13配置を照合"
+        },
+        {
+          "start": 154.904,
+          "title": "記録による影響を確認"
+        },
+        {
+          "start": 177.816,
+          "title": "保存値で姿勢を比較"
+        },
+        {
+          "start": 192.05333333333334,
+          "title": "全13配置を並べる"
+        },
+        {
+          "start": 205.85333333333332,
+          "title": "この診断で言えること"
+        }
+      ],
+      "chaptersFile": "media/history-v6-retention/chapters.json",
+      "script": "media/history-v6-retention/script.txt",
+      "titleFile": "media/history-v6-retention/youtube-title.txt",
+      "descriptionFile": "media/history-v6-retention/youtube-description.txt",
+      "srt": "media/history-v6-retention/captions.srt",
+      "vtt": "media/history-v6-retention/captions.vtt"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+当時の音声・字幕を保持し、立ち絵を坂本アヒルの通常衣装へ再編集した研究解説です。
+
+第2回の旧条件・手動例 / 2026-10-21。古い目標・途中結果・将来計画は当時の説明です。現在のV9集計とは別で、追加試行は終了しています。
+
+研究の発想は「ヤムチャの倒れたポーズが偶然に現れるのか」。映像の模型は原作の複製ではなく、研究用の汎用表示です。
+V9主集計は記録6,900、判定可能6,569、未確定331、成功確認0。82%は姿勢類似度で、発生確率ではありません。V10の物理評価は0/32。
+未確定を失敗や0点へ補完していません。動画の追加制作は物理試行を増やしません。
+
+章
+00:00 1 比較できる座標へ
+01:25 2 距離と角度を測る
+02:55 3 点数と必須条件
+04:50 4 段階表示を正しく読む
+05:52 5 乱数と探索
+07:48 6 保存結果を読む
+09:16 7 数字を判断の道具へ
+
+保存資料
+V9凍結済み台帳・保存解析、各版の記録。結果サイトのCSV・姿勢データ・source hash一覧で根拠を確認できます。
+
+方法の参考
+Unity 6.0 Scripting API: PhysicsScene.Simulate
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PhysicsScene.Simulate.html
+Unity 6.0 Scripting API: Quaternion.Angle
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Quaternion.Angle.html
+NIST/SEMATECH e-Handbook, 7.2.4.1 Confidence intervals
+https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm
+de Boer, Kroese, Mannor & Rubinstein (2005), A Tutorial on the Cross-Entropy Method — University of Twente
+https://research.utwente.nl/en/publications/a-tutorial-on-the-cross-entropy-method/
+VOICEVOX ソフトウェア利用規約
+https://voicevox.hiroshiba.jp/term/
+東北ずん子・ずんだもんプロジェクト 利用ガイドライン
+https://zunko.jp/guideline.html
+音源についての共通規約
+https://zunko.jp/con_ongen_kiyaku.html
+
+音声：VOICEVOX:ずんだもん（合成音声）
+立ち絵：坂本アヒル（ずんだもんV3.2基本版・通常衣装）
+
+整理基準日：2026-11-01。旧条件の動画は、画面・説明に記した当時の範囲です。

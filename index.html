@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ragdoll研究の保存記録を解説。V9は6,900件、確認済み成功0件。未確定を別に扱い、保存姿勢の360度表示と挙動映像で成果と限界を紹介します。">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>倒れ方の観測ノート｜Ragdoll研究の結果</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="geometry.js" defer></script>
+  <script src="blue-human.js" defer></script>
+  <script src="pose-viewer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main"><span class="mark" aria-hidden="true">R</span>倒れ方の観測ノート</a>
+    <nav aria-label="ページ内の案内">
+      <a href="#results">結果</a><a href="#poses">模型を回す</a><a href="#films">映像</a><a href="#history">歩み</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">RAGDOLL RESEARCH / 保存記録から読む</p>
+        <h1 id="hero-title">倒れ方は、<br>ひとつじゃない。</h1>
+        <p class="hero-intro">「ヤムチャの倒れたポーズが偶然に現れるのか」という発想から始めた研究です。関節でつないだ汎用模型で調べた<strong>V9の6,900件</strong>を、似ていた形も、判定できなかった記録も、分けて残しました。</p>
+        <p class="hero-conclusion"><span>今回の結論</span> 確認済みの成功は0件。<br>ただし「絶対に起こらない」とは言えません。</p>
+        <div class="hero-actions"><a class="button primary" href="#results">分かったことを読む <span aria-hidden="true">↓</span></a><a class="button" href="#poses">保存した模型を見る</a></div>
+        <p class="small">追加の物理試行は終了。計画10,000件は未完了のままです。</p>
+      </div>
+      <figure class="specimen">
+        <div class="specimen-label"><span>V9 / TERMINAL ATLAS</span><span>0000—0099</span></div>
+        <img src="assets/terminal-atlas.png" width="1000" height="1000" alt="V9 trial 0から99の保存終端姿勢100例を、汎用の関節模型で再描画した標本一覧">
+        <figcaption><strong>100例の「最後の形」。</strong> 動く軌道の一覧ではありません。表示用の再描画で、新しい物理計算はしていません。</figcaption>
+      </figure>
+    </section>
+
+    <div id="data-error" class="section-wrap error-box" role="alert" hidden></div>
+    <noscript><p class="section-wrap note">このページの本文はそのまま読めます。表の検索・3D操作・動画一覧にはJavaScriptが必要です。<a href="data/summary.json">集計データ</a>と<a href="data/trials.csv">全6,900件のCSV</a>からも結果を確認できます。</p></noscript>
+
+    <section class="section-wrap method-section" aria-labelledby="question-title">
+      <div class="section-heading"><p class="eyebrow">研究の問い</p><h2 id="question-title">「似た形で止まる」を、測れる問いに。</h2></div>
+      <div class="method-grid">
+        <div><h3>何を調べた？</h3><p>11の剛体（変形しない部品）を関節でつないだ模型に、一定のルールで力を加えます。初期の位置や向きが変わると、飛び方・倒れ方・最後の姿勢がどう変わるかを調べました。</p></div>
+        <div><h3>何と比べた？</h3><p>V9では、保存した全身の参照姿勢を固定しました。位置、関節の回転、胴体の向き、部位間の形を数値で比較。見た目だけでなく、静止や向きの条件も確認します。</p></div>
+        <div><h3>何ではない？</h3><p>原作キャラクターや現実の人体の再現ではありません。身長・質量・形状は模型の仮定です。人体の損傷、実際の衝撃波、現実世界での発生確率は測っていません。</p></div>
+      </div>
+      <ol class="method-strip" aria-label="実験の流れ">
+        <li><span>初期条件</span>固定した範囲から入力を選ぶ</li>
+        <li><span>運動</span>力・重力・関節・接触</li>
+        <li><span>静止の確認</span>全身が止まったかを見る</li>
+        <li><span>姿勢の比較</span>固定した基準と照合する</li>
+      </ol>
+    </section>
+
+    <section id="results" class="results-section" aria-labelledby="results-title">
+      <div class="section-wrap">
+        <div class="section-heading spread"><div><p class="eyebrow">V9 / 現在の結果</p><h2 id="results-title">分かったことを、<br class="mobile-break">3つの区分で。</h2></div><p class="date-tag">記録の整理基準日<br><time datetime="2026-11-01">2026.11.01</time></p></div>
+        <p class="section-lead">計画10,000件のうち<strong>6,900件</strong>を記録。残り3,100件は実行していません。未確定を失敗や0点に置き換えず、分けて表示します。</p>
+        <div class="status-cards">
+          <article class="status-card qualified"><p class="status-code">QualifiedSettled</p><h3>判定可能な静止</h3><p class="stat">6,569<span>件</span></p><p>姿勢を評価できた記録。確認済みの成功は0件でした。</p></article>
+          <article class="status-card unresolved"><p class="status-code">UnresolvedBudget</p><h3>上限内に確定せず</h3><p class="stat">317<span>件</span></p><p>計算の上限で結論が出なかった記録。点数・成功判定は未確定です。</p></article>
+          <article class="status-card review"><p class="status-code">QualityReview</p><h3>品質の確認が必要</h3><p class="stat">14<span>件</span></p><p>品質上の確認を要する記録。失敗として集計していません。</p></article>
+        </div>
+        <p class="note"><strong>未確定は計331件。</strong> 0点でも、成功でも、失敗でもありません。配布CSVの空欄とJSONの<code>null</code>は、この未確定を表しています。</p>
+
+        <div class="distribution-grid">
+          <div>
+            <p class="eyebrow">姿勢の類似度</p><h3>多くの記録は、まだ基準から遠い。</h3>
+            <p>数値は形の近さを表す<strong>姿勢類似度</strong>。82%は成功判定で使う点数の閾値で、<strong>「82%の確率で起こる」という意味ではありません。</strong></p>
+            <dl class="quantiles">
+              <div><dt>中央値</dt><dd>14.71<span>%</span></dd></div>
+              <div><dt>95パーセンタイル</dt><dd>24.15<span>%</span></dd></div>
+              <div><dt>99パーセンタイル</dt><dd>29.18<span>%</span></dd></div>
+              <div><dt>最高</dt><dd>47.22<span>%</span></dd></div>
+            </dl>
+            <p class="small">対象：判定可能な6,569件のみ。95パーセンタイルは、記録の95%がその値以下にある境目です。</p>
+          </div>
+          <figure class="chart-panel"><div class="chart-heading"><h3>類似度の分布</h3><span>2ポイント刻み / 6,569件</span></div><div id="histogram" aria-label="判定可能な記録の姿勢類似度分布"></div><figcaption>横軸は姿勢類似度、縦軸は記録数。未確定331件はこの図に含めていません。</figcaption><details><summary>分布を数表で読む</summary><table class="compact-table"><caption>2ポイント幅ごとの記録数</caption><thead><tr><th>類似度</th><th>件数</th></tr></thead><tbody id="histogram-table"></tbody></table></details></figure>
+        </div>
+        <article class="best-callout">
+          <div><p class="eyebrow">最高例 / trial 2613</p><h3>47.22%でも、成功ではない。</h3><p>seed <code>3465339881</code>。右前腕の関節角の差は<strong>約99.2°</strong>で、上限75°を超えました。全体の点数だけでなく、各部位や向きの条件を同時に満たす必要があります。</p><a class="text-link" href="#poses">参照と並べて、違いを見る <span aria-hidden="true">↗</span></a></div>
+          <p class="angle-stamp"><span>右前腕の関節角差</span><strong>99.2°</strong><span>判定上限 75°</span></p>
+        </article>
+        <details class="data-details"><summary>上位100件と、全6,900件のデータ</summary>
+          <p>上位表は判定可能な記録の類似度順です。seedは入力を識別するための乱数の出発点で、seedだけでモデルや設定を再現できるわけではありません。</p>
+          <div class="table-tools"><label for="trial-search">trial番号・seedで絞り込み <input id="trial-search" type="search" placeholder="例：2613" autocomplete="off"></label><p id="table-count" role="status"></p><a href="data/top100.csv" download>上位100件 CSV</a><a href="data/trials.csv" download>全6,900件 CSV</a></div>
+          <div class="table-scroll" tabindex="0" aria-label="上位結果の表。横方向にスクロールできます"><table><caption>V9 上位100件 / すべて非一致</caption><thead><tr><th scope="col">順位</th><th scope="col">trial</th><th scope="col">seed</th><th scope="col">類似度</th><th scope="col">状態</th></tr></thead><tbody id="top-results"></tbody></table></div>
+          <p id="table-empty" hidden>一致するtrial・seedはありません。</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="poses" class="section-wrap pose-section" aria-labelledby="poses-title">
+      <div class="section-heading"><p class="eyebrow">保存した形を、いろいろな角度から</p><h2 id="poses-title">模型を回して、確かめる。</h2></div>
+      <p class="section-lead">左はV9の保存参照、右は最高非一致例。どちらも<strong>保存した姿勢</strong>で、新しい実験や動作シミュレーションではありません。動かすのはカメラだけです。</p>
+      <p>青い人体CGは、同じ11剛体の位置・回転に、手・足・表面を重ねた<strong>表示専用の模型</strong>です。外見と接触計算の形状は別なので、検査用のCollider表示にも切り替えられます。手足の装飾は、測定された身体部位や地面との接触を示すものではありません。</p>
+      <div class="pose-toolbar" role="group" aria-label="人体CGと検査形状を切り替える">
+        <button type="button" data-render-style="human" aria-pressed="true">人体CG（表示専用）</button>
+        <button type="button" data-render-style="collider" aria-pressed="false">検査形状（Collider）</button>
+      </div>
+      <div class="pose-toolbar" role="group" aria-label="模型の表示方法">
+        <button type="button" data-pose-mode="compare" aria-pressed="true">並べて比較</button><button type="button" data-pose-mode="reference" aria-pressed="false">参照だけ</button><button type="button" data-pose-mode="best" aria-pressed="false">最高例だけ</button>
+      </div>
+      <p id="pose-error" class="note" role="status" hidden></p>
+      <div class="pose-panels" id="pose-panels">
+        <figure class="pose-card" data-pose="reference"><div class="pose-label"><h3>V9の保存参照</h3><span>aa84…89de / 比較の基準</span></div><canvas id="reference-canvas" tabindex="0" role="img" aria-label="保存参照姿勢の360度模型。ドラッグまたは矢印キーでカメラを回転。プラス・マイナスで拡大縮小。Homeでリセット。" aria-describedby="pose-help"></canvas><img class="pose-fallback" src="assets/reference-pose.png" width="900" height="740" alt="V9保存参照姿勢の汎用模型・静止画" hidden><figcaption>参照姿勢そのものは成功例ではありません。接触の残差や関節可動域に関する限界を含みます。</figcaption></figure>
+        <figure class="pose-card" data-pose="best"><div class="pose-label"><h3>最高の非一致例 <strong>47.22%</strong></h3><span>trial 2613 / seed 3465339881</span></div><canvas id="best-canvas" tabindex="0" role="img" aria-label="V9 trial 2613の360度模型。ドラッグまたは矢印キーで共通カメラを回転。プラス・マイナスで拡大縮小。Homeでリセット。" aria-describedby="pose-help"></canvas><img class="pose-fallback" src="assets/best-pose.png" width="900" height="740" alt="trial 2613の保存終端姿勢・汎用模型の静止画" hidden><figcaption>QualifiedSettled / 3.908秒時点の終端。右前腕の関節角差99.2°。見た目の近さだけでは成功しません。</figcaption></figure>
+      </div>
+      <div id="camera-controls" class="camera-controls">
+        <label for="camera-yaw">左右に回す <input id="camera-yaw" type="range" min="0" max="360" value="35" step="1"></label>
+        <label for="camera-elevation">上下から見る <input id="camera-elevation" type="range" min="-80" max="85" value="42" step="1"></label>
+        <label for="camera-zoom">拡大・縮小 <input id="camera-zoom" type="range" min="0.7" max="1.8" value="1" step="0.05"></label>
+        <button type="button" id="camera-reset">視点をリセット</button><button type="button" id="camera-top">真上に近い視点</button>
+      </div>
+      <p id="pose-help" class="small">ドラッグ・タッチで回転。キーボードは矢印キー、＋／−、Home。ピンチまたは拡大スライダーでズーム。両模型は共通のカメラ方向・倍率です（各骨盤をカメラの基点にします）。人体CGは全身青色。<strong>検査形状では青＝模型の左、橙＝模型の右</strong>です。左右を入れ替えたり、姿勢を修正したりしていません。</p>
+      <p id="camera-readout" class="camera-readout" role="status" aria-live="polite"></p>
+      <details><summary>この3D表示の根拠と限界</summary><p>元のworld位置・Quaternion（3Dの向きを表す数値）・Collider（接触計算に使う形状）から描画します。Unityの座標X,Y,Zは、表示の際にX,Y,−Zへ一度だけ変換。骨盤基準のカメラ移動は、部位の位置・回転やスコアを変えません。地面の見た目から接触品質を判断しないよう、このビューには地形を表示していません。</p><p>aa84は固定した参照データのSHA-256先頭です。基準の姿勢は、原作と校正済みの正解でも、どんな条件でも安定して保てるという証拠でもありません。</p><a href="data/poses.json" download>表示用の保存姿勢データ</a></details>
+    </section>
+
+    <section id="films" class="films-section" aria-labelledby="films-title"><div class="section-wrap">
+      <div class="section-heading"><p class="eyebrow">見る観測ノート</p><h2 id="films-title">動きと解説を、映像で。</h2></div>
+      <p class="section-lead">まずは今回の総括と、保存挙動の映像から。過去の解説は<strong>当時の条件を残した再編集版</strong>です。古い数値や計画を、現在のV9結果に混ぜないでください。</p>
+      <p class="small">すべてのプレーヤーは初期ミュート・音量0・自動再生なし。音声を聴く場合は、ご自身で音量を上げてください。</p>
+      <div class="film-shortcuts" role="group" aria-label="倒れる過程へ移動">
+        <button type="button" data-seek-video="human-cg" data-seek-time="4" disabled>人体CGで倒れる過程を無音で見る · 8倍スロー</button>
+        <button type="button" data-seek-video="v9-behavior" data-seek-time="34">倒れる過程を無音で見る · 4倍スロー</button>
+        <button type="button" data-seek-video="v9-behavior" data-seek-time="51">同じ記録を無音で見る · 実時間</button>
+      </div>
+      <div id="video-list" class="video-list" aria-live="polite"></div>
+    </div></section>
+
+    <section id="history" class="section-wrap" aria-labelledby="history-title">
+      <div class="section-heading"><p class="eyebrow">研究の歩み</p><h2 id="history-title">試行が増えても、<br class="mobile-break">条件はひとつではない。</h2></div>
+      <p class="section-lead">主要3実験系で確認した<strong>のべ入力記録は19,900件</strong>。これはV5の中断等も含む台帳数で、独立した物理評価数や、再生できる軌道の数ではありません。研究全履歴の総数も意味しません。</p>
+      <div class="history-list">
+        <article><span class="version-label">初期</span><div><h3>物理・数学・実験手順を整理</h3><p>初期の20秒期限・旧仮参照によるRecorder映像も残っています。これはV5/V7/V9の主要3系列とは別の履歴です。第2回の適応探索や小さな対照診断とともに、当時の計画・判定ルールを現在の集計へ混ぜずに示します。</p></div></article>
+        <article><span class="version-label">V5</span><div><h3>固定10,000入力の台帳</h3><p>旧仮参照での記録。判定可能な非一致9,652、上限による未確定341、中断6、計測エラー1。V9とは参照や条件が違います。</p></div></article>
+        <article><span class="version-label">V6</span><div><h3>近い形を、そのまま保てるか</h3><p>手動の保存配置を使う保持診断へ。初期配置で停止した段階と、その後の13配置＋対照1解放の記録は別です。偶然の発生確率の標本ではありません。</p></div></article>
+        <article><span class="version-label">V7</span><div><h3>3つの入力条件を、各1,000件</h3><p>群ごとの非一致は964・964・967件、未確定は36・36・33件。合計3,000入力ですが、群を混ぜた確率は出しません。</p></div></article>
+        <article><span class="version-label">V9</span><div><h3>全身の参照を固定し、6,900件まで</h3><p>aa84保存参照を採用したこのページの主集計。最高47.22%、確認済み成功0。計画10,000件には達していません。</p></div></article>
+        <article><span class="version-label">V10</span><div><h3>改良と起動試行まで。物理評価は0/32</h3><p>実装・監視を改良しましたが、予定した32件の評価は未開始。OSプロセス監視の問題による停止を、物理現象の失敗とは扱いません。追加試行は行いません。</p></div></article>
+      </div>
+    </section>
+
+    <section class="limits-section" aria-labelledby="limits-title"><div class="section-wrap">
+      <div class="section-heading"><p class="eyebrow">限界と訂正</p><h2 id="limits-title">「分からない」を、残す。</h2></div>
+      <div class="limits-grid">
+        <article><h3>成功0件は、発生確率0%ではない</h3><p>有限の、しかも未完了の試行です。未確定な記録もあります。条件を変えた全ての可能性や、現実の人間の動きを否定できません。</p></article>
+        <article><h3>静止の区分は、非重なりの保証ではなかった</h3><p>QualifiedSettledは終端の直接衝突queryが全て非重なりという条件ではありませんでした。この同一視を訂正します。元の状態区分は変更していません。</p><p>全直接queryが非重なりの部分集合は6,569件中331件、最高28.69%。<strong>未確定の331件とは別の集合</strong>です。最高47.22%例にも床約0.494mm・部位間約0.0278mmのquery深度が残っています。</p></article>
+        <article><h3>全ての試行に、全ての動きは残っていない</h3><p>V9の終端記録は6,900件。一方、全ステップの姿勢を保存した連続軌道はtrial 0の1件だけです。最高例を含む残りは初期・終端・異常時の姿勢と品質要約。未保存区間を生成して実測のようには見せません。</p></article>
+        <article><h3>高得点と、物理的な妥当性は別</h3><p>数式上の目標を満たせば、その形が必ず現れるとは限りません。関節や接触、静止、全身の向きは別に確かめる必要があります。V10ではその物理評価にまだ入れていません。</p></article>
+      </div>
+      <details class="formula"><summary>採点式と、判定条件の詳細</summary>
+        <p>正規化した誤差の重み付き平均を <code>E</code> として、姿勢類似度は <code>S = exp(−E)</code> です。四つの点数を単純に平均する方法ではありません。</p>
+        <pre>E ≈ 0.35 × 位置RMSE / 0.12
+  + 0.35 × 関節RMSE / 40°
+  + 0.15 × 胴体重力方向誤差 / 45°
+  + 0.15 × 形状RMSE / 0.10</pre>
+        <p>位置・形状は基準長1.83mで正規化されています。係数の厳密値は保存されたfloat値で、式は読みやすい近似表記です。82%には <code>E ≤ 約0.198451</code> が必要です。全身の静止、最大部位誤差、各面の向き、品質等の別条件も残ります。</p>
+        <p>最高例の関節角差99.2°は「参照との回転差」であり、肘の曲げ量そのものでも、可動域を99.2°超過したという意味でもありません。</p>
+        <a href="data/summary.json">厳密な係数と集計値 JSON</a>
+      </details>
+    </div></section>
+
+    <section id="references" class="section-wrap references" aria-labelledby="references-title">
+      <div class="section-heading"><p class="eyebrow">根拠とクレジット</p><h2 id="references-title">数字と表現を、たどれるように。</h2></div>
+      <div class="reference-grid">
+        <div><h3>この研究の保存資料</h3><p>集計はV9の凍結済み台帳と、その保存解析から抽出しました。原データの私的な運用情報は配布していません。公開用データには、必要な数値・seed・状態・姿勢だけを含めています。</p><ul><li><a href="data/sources.json">参照した保存資料名とSHA-256</a></li><li><a href="data/trials.csv">全6,900件の結果 CSV</a></li><li><a href="data/history.json">版別の確認件数 JSON</a></li><li><a href="data/v9-trial0-motion.json">trial 0の全1,430保存フレーム JSON</a></li><li><a href="data/videos.json">動画・字幕・章の一覧 JSON</a></li></ul><p class="small">hashは同じファイルかを確かめる識別値で、測定の正しさや権利の許諾を証明するものではありません。</p></div>
+        <div><h3>方法を知るための公式資料</h3><ul><li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html">Unity 6：Rigidbody.AddExplosionForce</a></li><li><a href="https://docs.unity3d.com/6000.0/Documentation/Manual/RagdollStability.html">Unity 6：Joint and Ragdoll stability</a></li><li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Physics.ComputePenetration.html">Unity 6：Physics.ComputePenetration</a></li><li><a href="https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions">OpenStax：Impulse and Collisions</a></li></ul><p>公式文書は手法の説明です。この研究の実行結果や模型の妥当性を保証するものではありません。</p></div>
+        <div><h3>映像・音声</h3><p><strong>音声：VOICEVOX:ずんだもん</strong><br>過去の対話解説：VOICEVOX:四国めたん<br><strong>立ち絵：坂本アヒル</strong><br>ずんだもんV3.2基本版・通常衣装。対話の四国めたんは同作者2.1素材。</p><p>合成音声を使用しています。音声確認の範囲はテキストと波形で、人による聴取承認は行っていません。口の動きは音量同期で、音素同期ではありません。</p><p>過去の対話2作品の音楽：<a href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300012">“Local Forecast - Elevator” — Kevin MacLeod (incompetech.com)</a> / <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋、音量調整、ループ接続、ducking、fadeを含む既存mixを継承。</p><p><a href="https://voicevox.hiroshiba.jp/term/">VOICEVOX規約</a> · <a href="https://zunko.jp/guideline.html">キャラクター利用ガイドライン</a> · <a href="https://zunko.jp/con_ongen_kiyaku.html">音源共通規約</a></p></div>
+      </div>
+      <p class="small">模型・図表は保存数値から作成した汎用primitive表示、または説明用のオリジナル模式図です。漫画・アニメの元画像、原作衣装、原PSD、音声モデルは含めていません。第三者素材の利用条件は、サイトのコードやデータとは別です。</p>
+    </section>
+  </main>
+  <footer class="site-footer section-wrap"><span>Ragdoll Research / 観測ノート</span><span>目標未到達も、未確定も、研究の記録。</span><a href="#main">ページの先頭へ ↑</a></footer>
+</body>
+</html>

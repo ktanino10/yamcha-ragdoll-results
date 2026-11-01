@@ -1,0 +1,37 @@
+V9の確定記録、未確定331件、最高47.22%と成功条件、V10の物理評価0/32を約4分で整理します。
+
+82%は姿勢類似度の閾値。発生確率ではありません。追加の物理試行はしていません。
+
+研究の発想は「ヤムチャの倒れたポーズが偶然に現れるのか」。映像の模型は原作の複製ではなく、研究用の汎用表示です。
+V9主集計は記録6,900、判定可能6,569、未確定331、成功確認0。82%は姿勢類似度で、発生確率ではありません。V10の物理評価は0/32。
+未確定を失敗や0点へ補完していません。動画の追加制作は物理試行を増やしません。
+
+章
+00:00 模型で調べたこと
+00:28 6,900件の内訳
+01:03 似ている度合いと成功条件
+01:54 保存した動きの見方
+02:24 訂正と、残る限界
+03:18 記録を、次に残す
+
+保存資料
+V9凍結済み台帳・保存解析、各版の記録。結果サイトのCSV・姿勢データ・source hash一覧で根拠を確認できます。
+
+方法の参考
+Unity 6 — Rigidbody.AddExplosionForce
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html
+Unity 6 — Joint and Ragdoll stability
+https://docs.unity3d.com/6000.0/Documentation/Manual/RagdollStability.html
+Unity 6 — Physics.ComputePenetration
+https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Physics.ComputePenetration.html
+VOICEVOX ソフトウェア利用規約
+https://voicevox.hiroshiba.jp/term/
+東北ずん子・ずんだもんプロジェクト 利用ガイドライン
+https://zunko.jp/guideline.html
+音源についての共通規約
+https://zunko.jp/con_ongen_kiyaku.html
+
+音声：VOICEVOX:ずんだもん（合成音声）
+立ち絵：坂本アヒル（ずんだもんV3.2基本版・通常衣装）
+
+整理基準日：2026-11-01。旧条件の動画は、画面・説明に記した当時の範囲です。
