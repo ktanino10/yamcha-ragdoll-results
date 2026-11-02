@@ -91,7 +91,8 @@
   }
   function videoCard(record) {
     if (!/^[a-z0-9-]+$/.test(record.id) || !Number.isFinite(record.durationSeconds) ||
-        record.durationSeconds <= 0 || (record.youtubeId !== null && !/^[A-Za-z0-9_-]{11}$/.test(record.youtubeId))) {
+        record.durationSeconds <= 0 || (record.youtubeId !== null && (!/^[A-Za-z0-9_-]{11}$/.test(record.youtubeId) ||
+        !["public", "unlisted"].includes(record.youtubeVisibility)))) {
       throw new Error("動画のIDまたは再生情報が不正です。");
     }
     const card = element("article", "video-card"); card.id = `film-${record.id}`;
@@ -122,9 +123,19 @@
                 event.target.mute(); event.target.setVolume(0);
                 const iframe = event.target.getIframe();
                 iframe.title = record.title; iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+                card.dataset.youtubeMuted = String(event.target.isMuted());
+                card.dataset.youtubeVolume = String(event.target.getVolume());
+                card.dataset.youtubeState = String(event.target.getPlayerState());
                 card.dataset.youtubeReady = "true";
               },
-              onError: () => showError("YouTubeで再生できません。MP4のリンクを利用してください。")
+              onStateChange: event => {
+                card.dataset.youtubeState = String(event.data);
+                card.dataset.youtubeTime = String(event.target.getCurrentTime());
+              },
+              onError: event => {
+                card.dataset.youtubeError = String(event.data);
+                showError("YouTubeで再生できません。MP4のリンクを利用してください。");
+              }
             }
           });
         } catch (failure) {
@@ -149,7 +160,7 @@
       const link = element("a", "", label); link.href = asset(path); link.download = ""; links.append(link);
     }
     if (record.youtubeId) {
-      const link = element("a", "", "YouTubeで開く");
+      const link = element("a", "", record.youtubeVisibility === "unlisted" ? "YouTubeで開く（限定公開）" : "YouTubeで開く（公開）");
       link.href = `https://www.youtube.com/watch?v=${record.youtubeId}`;
       link.rel = "noopener"; links.append(link);
     }

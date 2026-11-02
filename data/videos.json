@@ -13,7 +13,8 @@
       "poster": "media/summary/poster-selected-gi-v1.jpg",
       "sha256": "e7354ff7bbcd4116057d0c12de45149f2f58357c60526d35aefcb9a12294baa2",
       "posterSha256": "2b951abb892a8e8aa1b95ff94b0df4826135a8ed1bcbe5d159cbec6f2368c402",
-      "youtubeId": null,
+      "youtubeId": "EkYsLnWxTJc",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -59,7 +60,8 @@
       "poster": "media/behavior/poster.jpg",
       "sha256": "3d8c9fe6f8ea67937abc0293ecba08e31b21db8027c34da4b3067950a1f96725",
       "posterSha256": "7f47c38b5e2e2f37ddc4741b9845627e113db66534f9fd91debc5dc1c4f44ad8",
-      "youtubeId": null,
+      "youtubeId": "9vRIWQ5LEcA",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -113,7 +115,8 @@
       "poster": "media/human-cg/poster-v2.jpg",
       "sha256": "65705053bfffa5e9b4a01a23d74806a6f23099ff75a2ada61796e5fa5f147243",
       "posterSha256": "37f822c1225d9e592e6fcc497b071fbe9e9bc3b04d753f0d131705d8692ced6c",
-      "youtubeId": null,
+      "youtubeId": "4NIfqX948ys",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -155,7 +158,8 @@
       "poster": "media/legacy-recorder-landscape/poster.jpg",
       "sha256": "09e14603318920e17d2a6d59ed6b6a81365b5fd7750837ec87a93d385679738c",
       "posterSha256": "8a8826f1dbf2116c7fd3df44b79b14424b7bec11e7e8da3639be7b0bb69d9c59",
-      "youtubeId": null,
+      "youtubeId": "tnqDtWjTTZU",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0.0,
@@ -197,7 +201,8 @@
       "poster": "media/legacy-recorder-portrait/poster.jpg",
       "sha256": "f36aeaffb48f6ef14dc8c89585b23b53eb414a10de2e5e9e1c10d6127e980e10",
       "posterSha256": "f70f82025d5e4a0c2e72bfc60042d53dde257e9ff8d3eb78377f636a99f0129d",
-      "youtubeId": null,
+      "youtubeId": "N9pOo5yFE4c",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0.0,
@@ -239,7 +244,8 @@
       "poster": "media/history-r2-comparison/poster.jpg",
       "sha256": "ca3a85081eaaa856202105a1308f27839b0bc968021f93b08220105e63ddb633",
       "posterSha256": "88c69a1ef6f226d908309324310bae3d2742aa49b0e497d045d66f4aa3fe7d42",
-      "youtubeId": null,
+      "youtubeId": "AtbauciFg9Q",
+      "youtubeVisibility": "unlisted",
       "chapters": [
         {
           "start": 0,
@@ -277,7 +283,8 @@
       "poster": "media/history-physics/poster-selected-gi-v1.jpg",
       "sha256": "29b9f935d4e55cbc32269cd8f6fc3519607908f4bafd9577d83c4e7f9d5df736",
       "posterSha256": "1c2d8ed5c574975204c4568bcd7989012e68d8da8099a5efbb3398b63789f203",
-      "youtubeId": null,
+      "youtubeId": "p_PZt2e8r9I",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -323,7 +330,8 @@
       "poster": "media/history-mathematics/poster-selected-gi-v1.jpg",
       "sha256": "fe2da80464639cc8784185c638557e4ad8497240569ba794072b03c96758cfdf",
       "posterSha256": "2adf55f90e4dc64afb69d690528f41471cdb881251afd114c1912780daa11a15",
-      "youtubeId": null,
+      "youtubeId": "ImYVfhbQ-Gw",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -373,7 +381,8 @@
       "poster": "media/history-experiment/poster-selected-gi-v1.jpg",
       "sha256": "964a0c1810348cda8d14324ac12b0ff00cd46ba2c51f03706adebeed94e5d07c",
       "posterSha256": "e78b3f4e85267c7152d760ab88aeb4c4db25f03fe12d4d0bb54e1c0c71c37d9a",
-      "youtubeId": null,
+      "youtubeId": "xbW-MNX_Eu0",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -423,7 +432,8 @@
       "poster": "media/history-v5-v6/poster-selected-gi-v1.jpg",
       "sha256": "8e69984bc5842d05da3b628d4841aeb30854ea913e1de5dde6cbae7f4154d33c",
       "posterSha256": "75df13085a67f590074399639d3527745321ac74dc82ea0d08aaa1cae9323d49",
-      "youtubeId": null,
+      "youtubeId": "F5PLEHKZcw0",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
@@ -489,7 +499,8 @@
       "poster": "media/history-v6-retention/poster-selected-gi-v1.jpg",
       "sha256": "96d7d14a65a2969c354ca383500c52130f6b01b6d6cc4e3ef3d1dcfd401bc044",
       "posterSha256": "5407de144cd4a0e87fb58a363227320933a3537849f5aafbb7b3be4abf641ad4",
-      "youtubeId": null,
+      "youtubeId": "RcHIEGE8X5s",
+      "youtubeVisibility": "public",
       "chapters": [
         {
           "start": 0,
