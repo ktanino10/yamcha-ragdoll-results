@@ -123,10 +123,17 @@
                 event.target.mute(); event.target.setVolume(0);
                 const iframe = event.target.getIframe();
                 iframe.title = record.title; iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-                card.dataset.youtubeMuted = String(event.target.isMuted());
-                card.dataset.youtubeVolume = String(event.target.getVolume());
-                card.dataset.youtubeState = String(event.target.getPlayerState());
-                card.dataset.youtubeReady = "true";
+                const started = performance.now();
+                const confirmDefaults = () => {
+                  const muted = event.target.isMuted(), volume = event.target.getVolume();
+                  card.dataset.youtubeMuted = String(muted);
+                  card.dataset.youtubeVolume = String(volume);
+                  card.dataset.youtubeState = String(event.target.getPlayerState());
+                  if (muted && volume === 0) card.dataset.youtubeReady = "true";
+                  else if (performance.now() - started < 2000) setTimeout(confirmDefaults, 50);
+                  else showError("YouTubeの初期ミュート・音量0を確認できません。MP4のリンクを利用してください。");
+                };
+                confirmDefaults();
               },
               onStateChange: event => {
                 card.dataset.youtubeState = String(event.data);
