@@ -124,9 +124,10 @@
 
     <section id="films" class="films-section" aria-labelledby="films-title"><div class="section-wrap">
       <div class="section-heading"><p class="eyebrow">見る観測ノート</p><h2 id="films-title">動きと解説を、映像で。</h2></div>
-      <p class="section-lead">まずは今回の総括と、保存挙動の映像から。過去の解説は<strong>当時の条件を残した再編集版</strong>です。古い数値や計画を、現在のV9結果に混ぜないでください。</p>
+      <p class="section-lead">総括・保存挙動・空背景のCGを含む全12本。過去の解説は<strong>当時の条件を残した再編集版</strong>です。古い数値や計画を、現在のV9結果に混ぜないでください。</p>
       <p class="small">すべてのプレーヤーは初期ミュート・音量0・自動再生なし。音声を聴く場合は、ご自身で音量を上げてください。</p>
       <div class="film-shortcuts" role="group" aria-label="倒れる過程へ移動">
+        <button type="button" data-seek-video="sky-saved-data-cg" data-seek-time="9" disabled>空背景のV9保存軌道を無音で見る · 4倍スロー</button>
         <button type="button" data-seek-video="human-cg" data-seek-time="4" disabled>人体CGで倒れる過程を無音で見る · 8倍スロー</button>
         <button type="button" data-seek-video="v9-behavior" data-seek-time="34">倒れる過程を無音で見る · 4倍スロー</button>
         <button type="button" data-seek-video="v9-behavior" data-seek-time="51">同じ記録を無音で見る · 実時間</button>
@@ -174,6 +175,9 @@
         <div><h3>方法を知るための公式資料</h3><ul><li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody.AddExplosionForce.html">Unity 6：Rigidbody.AddExplosionForce</a></li><li><a href="https://docs.unity3d.com/6000.0/Documentation/Manual/RagdollStability.html">Unity 6：Joint and Ragdoll stability</a></li><li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Physics.ComputePenetration.html">Unity 6：Physics.ComputePenetration</a></li><li><a href="https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions">OpenStax：Impulse and Collisions</a></li></ul><p>公式文書は手法の説明です。この研究の実行結果や模型の妥当性を保証するものではありません。</p></div>
         <div><h3>映像・音声</h3><p><strong>音声：VOICEVOX:ずんだもん</strong><br>過去の対話解説：VOICEVOX:四国めたん<br><strong>立ち絵：坂本アヒル</strong><br>ずんだもんV3.2基本版の衣装を改変。数学・実験方法の解説では髪型も改変しています。髪型・発光は映像演出で、実験の成功を示すものではありません。対話の四国めたんは同作者2.1素材で、衣装は変更していません。</p><p>合成音声を使用しています。音声確認の範囲はテキストと波形で、人による聴取承認は行っていません。口の動きは音量同期で、音素同期ではありません。</p><p>過去の対話2作品の音楽：<a href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300012">“Local Forecast - Elevator” — Kevin MacLeod (incompetech.com)</a> / <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋、音量調整、ループ接続、ducking、fadeを含む既存mixを継承。</p><p><a href="https://voicevox.hiroshiba.jp/term/">VOICEVOX規約</a> · <a href="https://zunko.jp/guideline.html">キャラクター利用ガイドライン</a> · <a href="https://zunko.jp/con_ongen_kiyaku.html">音源共通規約</a></p></div>
       </div>
+      <h3>空背景CGのクレジット</h3>
+      <p>空：<a href="https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky">Kloofendal 48d Partly Cloudy (Pure Sky)</a> — Poly Haven / <a href="https://polyhaven.com/license">CC0 1.0</a>。</p>
+      <p>本研究のプロシージャル表示用モデル：表示用の形状・衣装・髪型です。公式に取得したキャラクターモデルではなく、接触計算の形状とも区別します。</p>
       <p class="small">模型・図表は保存数値から作成した汎用primitive表示、または説明用のオリジナル模式図です。漫画・アニメの元画像、原PSD、音声モデルは含めていません。立ち絵には衣装・髪型の改変を含みます。第三者素材の利用条件は、サイトのコードやデータとは別です。</p>
     </section>
   </main>

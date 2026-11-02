@@ -538,6 +538,34 @@
       "descriptionFile": "media/history-v6-retention/youtube-description.txt",
       "srt": "media/history-v6-retention/captions.srt",
       "vtt": "media/history-v6-retention/captions.vtt"
+    },
+    {
+      "id": "sky-saved-data-cg",
+      "title": "空背景で見るV9の保存姿勢と軌道",
+      "kindLabel": "保存データのCG再描画 / 無音",
+      "description": "空背景の30秒CG。上位9例の保存終端姿勢、trial 0の保存軌道を4倍スローで表示し、最後に最高の非一致例2613を表示用モデルで見せます。",
+      "contextNote": "上位9例と最後の2613は静止姿勢で、動くのはカメラだけ。身体の動きはV9 trial 0の保存記録のみです。新しい物理計算や未保存区間の補間はしていません。",
+      "durationSeconds": 30,
+      "mp4": "media/sky-saved-data-cg/saved-data-cg-20261102-16x9.mp4",
+      "orientation": "landscape",
+      "poster": "media/sky-saved-data-cg/poster.png",
+      "sha256": "766b67095745f059ffb4e0452a078346555da25e628741723fde5a41a2306830",
+      "posterSha256": "437d709c2770473aebf3490019c7a8b6ae2b2615d36bd09b0e36ad66210265e3",
+      "youtubeId": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "上位9例の保存終端・カメラだけ移動"
+        },
+        {
+          "start": 9,
+          "title": "V9 trial 0の保存軌道・4倍スロー"
+        },
+        {
+          "start": 21,
+          "title": "最高非一致例2613・カメラだけ移動"
+        }
+      ]
     }
   ]
 }
